@@ -24,8 +24,22 @@ public class GameService implements IGameService {
     public void play(Game game,int serviceWinner) {
         if(game.getWinner()==null) {
             if(serviceWinner==1) {
-                if (!game.getScorePlayer1().equals("40")){
+                if (scores.indexOf(game.getScorePlayer1())<3 ){
                     game.setScorePlayer1(scores.get(scores.indexOf(game.getScorePlayer1()) + 1));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer2())==3 && scores.indexOf(game.getScorePlayer1())==3){
+                    game.setScorePlayer1(scores.get(4));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer2())==4){
+                    game.setScorePlayer1(scores.get(5));
+                    game.setScorePlayer2(scores.get(5));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer1())==5 && scores.indexOf(game.getScorePlayer2())==5){
+                    game.setScorePlayer1(scores.get(4));
+                    game.setScorePlayer2(scores.get(3));
                     updateScore(game);
                 }
                 else {
@@ -36,8 +50,22 @@ public class GameService implements IGameService {
             }
             else if(serviceWinner==2)
             {
-                if (!game.getScorePlayer2().equals("40")){
+                if (scores.indexOf(game.getScorePlayer2())<3 ){
                     game.setScorePlayer2(scores.get(scores.indexOf(game.getScorePlayer2()) + 1));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer1())==3 && scores.indexOf(game.getScorePlayer2())==3){
+                    game.setScorePlayer2(scores.get(4));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer1())==4){
+                    game.setScorePlayer1(scores.get(5));
+                    game.setScorePlayer2(scores.get(5));
+                    updateScore(game);
+                }
+                else if(scores.indexOf(game.getScorePlayer1())==5 && scores.indexOf(game.getScorePlayer2())==5){
+                    game.setScorePlayer1(scores.get(3));
+                    game.setScorePlayer2(scores.get(4));
                     updateScore(game);
                 }
                 else{

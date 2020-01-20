@@ -1,7 +1,5 @@
 package tennis.service;
 
-
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tennis.model.Game;
@@ -17,7 +15,6 @@ public class GameServiceTest {
 
     @BeforeEach
     public void setUp(){
-        System.out.println("before");
         game=gameService.createGame("Nadal","Federer");
 
     }
@@ -76,6 +73,45 @@ public class GameServiceTest {
         gameService.play(game,1);
         gameService.resetPlayersScore(game);
         assertThat(game.getScorePlayer1()).isEqualTo("0");
+    }
+
+    //Sprint 2
+
+
+    @Test
+    public void shouldGetAdvantageInScore(){
+        gameService.play(game,1);
+        gameService.play(game,1);
+        gameService.play(game,1); //40
+        gameService.play(game,1); //40
+        assertThat(game.getScorePlayer1()).isEqualTo("ADV");
+    }
+
+    @Test
+    public void shouldGetDeuceInScore(){
+        gameService.play(game,2);
+        gameService.play(game,2);
+        gameService.play(game,2); //40
+        gameService.play(game,1);
+        gameService.play(game,1);
+        gameService.play(game,1); //40
+        gameService.play(game,1); //ADV
+        gameService.play(game,2); //DEUCE
+        assertThat(game.getScorePlayer1()).isEqualTo("DEUCE");
+    }
+
+    @Test
+    public void shouldGetAdvantageAfterADeuce(){
+        gameService.play(game,2);
+        gameService.play(game,2);
+        gameService.play(game,2); //40
+        gameService.play(game,1);
+        gameService.play(game,1);
+        gameService.play(game,1); //40
+        gameService.play(game,1); //ADV
+        gameService.play(game,2); //DEUCE
+        gameService.play(game,1); //ADV
+        assertThat(game.getScorePlayer1()).isEqualTo("ADV");
     }
 
 }
