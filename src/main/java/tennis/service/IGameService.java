@@ -4,7 +4,7 @@ import tennis.model.Game;
 
 public interface IGameService {
 
-    Game createGame(String player1Name,String player2Name);
+    Game createGame();
     void play(Game game,int serviceWinner);
     void updateScore(Game game);
     void resetPlayersScore(Game game);

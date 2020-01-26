@@ -9,20 +9,18 @@ public class GameService implements IGameService {
     private PlayerService playerService=new PlayerService();
 
     @Override
-    public Game createGame(String player1Name, String player2Name) {
+    public Game createGame() {
 
         return Game.builder()
-                .player1(playerService.createPlayer(player1Name))
-                .player2(playerService.createPlayer(player2Name))
                 .scorePlayer1("0")
                 .scorePlayer2("0")
-                .gameScore(new StringBuilder(player1Name+":"+player2Name+"|0:0"))
+                .gameScore(new StringBuilder("0:0"))
                 .build();
     }
 
     @Override
     public void play(Game game,int serviceWinner) {
-        if(game.getWinner()==null) {
+        if(game.getGameWinner()==null) {
             if(serviceWinner==1) {
                 if (scores.indexOf(game.getScorePlayer1())<3 ){
                     game.setScorePlayer1(scores.get(scores.indexOf(game.getScorePlayer1()) + 1));
@@ -43,9 +41,9 @@ public class GameService implements IGameService {
                     updateScore(game);
                 }
                 else {
-                    game.setWinner(game.getPlayer1());
-                    updateScore(game);
+                    game.setGameWinner(1);
                     resetPlayersScore(game);
+                    updateScore(game);
                 }
             }
             else if(serviceWinner==2)
@@ -69,9 +67,9 @@ public class GameService implements IGameService {
                     updateScore(game);
                 }
                 else{
-                    game.setWinner(game.getPlayer2());
-                    updateScore(game);
+                    game.setGameWinner(2);
                     resetPlayersScore(game);
+                    updateScore(game);
                 }
             }
         }
@@ -80,10 +78,9 @@ public class GameService implements IGameService {
     }
     @Override
     public void updateScore(Game game) {
-        if(game.getWinner()!=null)
-         game.setGameScore(game.getGameScore().append("|"+game.getWinner().getName()+" win the game"));
-        else
          game.setGameScore(game.getGameScore().append("|"+game.getScorePlayer1()+":"+game.getScorePlayer2()));
+        if(game.getGameWinner()!=null)
+            game.setGameScore(game.getGameScore().append("|"+((game.getGameWinner()==1)?"Player 1":"Player 2")+" win the game"));
     }
 
     @Override

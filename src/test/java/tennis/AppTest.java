@@ -41,8 +41,5 @@ public class AppTest
         assertThat(game.getScorePlayer1()).isEqualTo(0);
     }
 
-    public void shouldStartGameBetweenTwhoPlayer(){
-        game=gameService.createGame("Nadal","Federer");
-        assertThat(game.getPlayer1().getName()).isEqualToIgnoringCase("Nadal");
-    }
+
 }

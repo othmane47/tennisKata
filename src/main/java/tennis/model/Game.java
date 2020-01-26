@@ -11,9 +11,7 @@ import java.util.List;
 public class Game {
     public static final List<String> scores = Arrays.asList("0", "15", "30", "40","ADV","DEUCE");
 
-    public Player player1;
-    public Player player2;
-    public Player winner;
+    public Integer gameWinner;
     public String scorePlayer1;
     public String scorePlayer2;
     public StringBuilder gameScore;
