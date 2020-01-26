@@ -2,19 +2,13 @@ package tennis.model;
 
 import lombok.Builder;
 import lombok.Data;
+import tennis.model.scoreFactory.Score;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Data
 @Builder
 public class Game {
-    public static final List<String> scores = Arrays.asList("0", "15", "30", "40","ADV","DEUCE");
-
-    public Integer gameWinner;
-    public String scorePlayer1;
-    public String scorePlayer2;
-    public StringBuilder gameScore;
-
-
+    private Integer gameWinner;
+    private List<Score> gameScore;
 }

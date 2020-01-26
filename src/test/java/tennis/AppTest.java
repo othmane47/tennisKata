@@ -38,7 +38,7 @@ public class AppTest
 
     @Test
     public void shouldGameStartsWithScrore0(){
-        assertThat(game.getScorePlayer1()).isEqualTo(0);
+       // assertThat(game.getScorePlayer1()).isEqualTo(0);
     }
 
 

@@ -4,13 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tennis.model.Game;
 import tennis.model.Set;
+import tennis.model.scoreFactory.SetScore;
 
-import java.io.InputStream;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.*;
 
 class SetServiceTest {
+
     SetService setService=new SetService();
     GameService gameService=new GameService();
     Set set;
@@ -60,14 +61,18 @@ class SetServiceTest {
         IntStream.range(0,4).forEach(i -> gameService.play(game2,2));
         setService.playGame(set, game2);
 
-        assertThat(set.getScorePlayer1()).isEqualTo(1);
-        assertThat(set.getScorePlayer2()).isEqualTo(1);
+        assertThat(setService.getSetScore(set).getScorePlayer1()).isEqualTo(1);
+        assertThat(setService.getSetScore(set).getScorePlayer2()).isEqualTo(1);
     }
 
     @Test
     public void shouldPlayerOneWinsTheSetWithScore6() throws Exception {
-        set.setScorePlayer1(5);
-        set.setScorePlayer2(4);
+        SetScore newScore = SetScore.builder()
+                .scorePlayer1(5)
+                .scorePlayer2(4)
+                .build();
+        set.getSetScore().add(newScore);
+
 
         Game game= gameService.createGame();
         IntStream.range(0,4).forEach(i -> gameService.play(game,1));
@@ -78,8 +83,12 @@ class SetServiceTest {
 
     @Test
     public void shouldPlayerOneWinsTheSetWithScore7() throws Exception {
-        set.setScorePlayer1(6);
-        set.setScorePlayer2(5);
+        SetScore newScore = SetScore.builder()
+                .scorePlayer1(6)
+                .scorePlayer2(5)
+                .build();
+        set.getSetScore().add(newScore);
+
 
         Game game= gameService.createGame();
         IntStream.range(0,4).forEach(i -> gameService.play(game,1));
@@ -87,7 +96,6 @@ class SetServiceTest {
 
         assertThat(set.getSetWinner()).isEqualTo(1);
     }
-
 
 
 

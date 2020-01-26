@@ -2,15 +2,19 @@ package tennis.model;
 
 import lombok.Builder;
 import lombok.Data;
+import tennis.model.scoreFactory.SetScore;
+import tennis.model.scoreFactory.TiebreakScore;
 
 import java.util.List;
+import java.util.Map;
 
 @Data
 @Builder
 public class Set {
     private List<Game> games;
     public Integer setWinner;
-    public int scorePlayer1;
-    public int scorePlayer2;
+    private List<SetScore> setScore;
+    private List<TiebreakScore> tieScore;
+
 
 }
