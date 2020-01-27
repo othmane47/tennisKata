@@ -6,7 +6,6 @@ import tennis.model.scoreFactory.SetScore;
 import tennis.model.scoreFactory.TiebreakScore;
 
 import java.util.List;
-import java.util.Map;
 
 @Data
 @Builder

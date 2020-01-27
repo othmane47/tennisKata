@@ -15,6 +15,7 @@ class SetServiceTest {
     SetService setService=new SetService();
     GameService gameService=new GameService();
     Set set;
+    Game game;
 
 
     @BeforeEach
@@ -89,13 +90,69 @@ class SetServiceTest {
                 .build();
         set.getSetScore().add(newScore);
 
-
         Game game= gameService.createGame();
         IntStream.range(0,4).forEach(i -> gameService.play(game,1));
         setService.playGame(set, game);
 
         assertThat(set.getSetWinner()).isEqualTo(1);
     }
+
+    @Test
+    public void shouldActiveTieBreakRules() throws Exception {
+        SetScore newScore = SetScore.builder()
+                .scorePlayer1(6)
+                .scorePlayer2(5)
+                .build();
+        set.getSetScore().add(newScore);
+
+        game= gameService.createGame();
+        IntStream.range(0,4).forEach(i -> gameService.play(game,2));
+        setService.playGame(set, game);
+
+        game= gameService.createGame();
+        IntStream.range(0,4).forEach(i -> gameService.play(game,1));
+        setService.playGame(set, game);
+        assertThat(setService.getTieScore(set).getScorePlayer1()).isEqualTo(1);
+    }
+
+    @Test
+    public void shouldPlayerTwoWinWithTieBreak() throws Exception {
+        SetScore newScore = SetScore.builder()
+                .scorePlayer1(6)
+                .scorePlayer2(5)
+                .build();
+        set.getSetScore().add(newScore);
+
+        IntStream.range(0,10).forEach(i ->{
+        game= gameService.createGame();
+        IntStream.range(0,4).forEach(j -> gameService.play(game,2));
+            try {
+                setService.playGame(set, game);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            game= gameService.createGame();
+        IntStream.range(0,4).forEach(j -> gameService.play(game,1));
+            try {
+                setService.playGame(set, game);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        IntStream.range(0,3).forEach(i -> {
+            game= gameService.createGame();
+            IntStream.range(0,4).forEach(j -> gameService.play(game,2));
+            try {
+                setService.playGame(set, game);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        assertThat(set.getSetWinner()).isEqualTo(2);
+
+        }
 
 
 
