@@ -3,8 +3,9 @@ package tennis.model;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.List;
-
+/**
+ * The type Match.
+ */
 @Data
 @Builder
 public class Match {

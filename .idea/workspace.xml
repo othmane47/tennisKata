@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c130d0bc-7ab9-4c8d-99b3-17a715bd9ce6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/model/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/model/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/AbstractFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/GameScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/Score.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/ScoreFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/SetScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/TiebreakScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/IPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/IPlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tennis/service/SetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tennis/service/SetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tennis/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tennis/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tennis/service/PlayerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tennis/service/PlayerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/model/Game$GameBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/model/Game$GameBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/service/GameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/service/GameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tennis/service/IGameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tennis/service/IGameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tennis/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tennis/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tennis/service/GameServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tennis/service/GameServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,10 +51,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/SetService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="400">
+              <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/GameService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-240">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-145">
+              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,13 +99,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="142" column="43" lean-forward="true" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+            <state relative-caret-position="300">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/SetService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/SetScore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/exception/NoTieBreakException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/ScoreFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -79,24 +188,33 @@
         <option value="$PROJECT_DIR$/src/main/java/tennis/service/IPlayerService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tennis/service/PlayerServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/AbstractFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/ScoreFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/Score.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/SetScore.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/TiebreakScore.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tennis/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/GameScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/AbstractFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tennis/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/exception/GameOverException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Match.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Set.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/model/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/AbstractFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/ScoreFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/Score.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/GameScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/SetScore.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/model/factory/TiebreakScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/service/SetService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tennis/exception/NoTieBreakException.java" />
         <option value="$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/service/GameService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Set.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tennis/model/Match.java" />
         <option value="$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tennis/service/SetService.java" />
       </list>
     </option>
   </component>
@@ -173,46 +291,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="scoreFactory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tennis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tennis" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -229,13 +307,14 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/tennis/model" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -276,7 +355,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameServiceTest.shouldGetPlayerOneAsWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tennis" />
       <extension name="coverage">
         <pattern>
@@ -285,13 +364,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tennis.service" />
-      <option name="MAIN_CLASS_NAME" value="tennis.service.SetServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tennis.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="shouldGetPlayerOneAsWinner" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetServiceTest.shouldActiveTieBreakRules" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameServiceTest.shouldGetPlayerTwoAsWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tennis" />
       <extension name="coverage">
         <pattern>
@@ -300,8 +380,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tennis.service" />
-      <option name="MAIN_CLASS_NAME" value="tennis.service.SetServiceTest" />
-      <option name="METHOD_NAME" value="shouldActiveTieBreakRules" />
+      <option name="MAIN_CLASS_NAME" value="tennis.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="shouldGetPlayerTwoAsWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -342,10 +422,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameServiceTest" />
-        <item itemvalue="JUnit.SetServiceTest" />
         <item itemvalue="JUnit.SetServiceTest.shouldPlayerTwoWinWithTieBreak" />
-        <item itemvalue="JUnit.SetServiceTest.shouldActiveTieBreakRules" />
         <item itemvalue="JUnit.SetServiceTest.shouldPlayerOneWinsTheSetWithScore7" />
+        <item itemvalue="JUnit.GameServiceTest.shouldGetPlayerTwoAsWinner" />
+        <item itemvalue="JUnit.GameServiceTest.shouldGetPlayerOneAsWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -367,50 +447,54 @@
       <workItem from="1579466653955" duration="4929000" />
       <workItem from="1579550025502" duration="11968000" />
       <workItem from="1579810394962" duration="678000" />
-      <workItem from="1579855501832" duration="53041000" />
+      <workItem from="1579855501832" duration="57600000" />
+      <workItem from="1580245137906" duration="27792000" />
+      <workItem from="1580419530121" duration="790000" />
+      <workItem from="1580420406695" duration="765000" />
+      <workItem from="1580421404366" duration="266000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 05m 31s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerOneWinsTheSetWithScore7 - 2020.01.30 at 16h 17m 05s.xml">
+      <configuration name="SetServiceTest.shouldPlayerOneWinsTheSetWithScore7" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetServiceTest_shouldPlayerOneWinsTheSetWithScore7 - 2020.01.30 at 16h 18m 33s.xml">
+      <configuration name="SetServiceTest.shouldPlayerOneWinsTheSetWithScore7" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 19m 32s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 06m 18s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 25m 29s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 06m 57s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 27m 48s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 10m 52s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 29m 02s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 11m 46s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 30m 27s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 16m 13s.xml">
+    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.30 at 16h 30m 54s.xml">
       <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 17m 27s.xml">
-      <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
+    <history-entry file="GameServiceTest - 2020.01.30 at 16h 31m 07s.xml">
+      <configuration name="GameServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 18m 25s.xml">
-      <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 19m 29s.xml">
-      <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetServiceTest_shouldPlayerTwoWinWithTieBreak - 2020.01.27 at 11h 20m 18s.xml">
-      <configuration name="SetServiceTest.shouldPlayerTwoWinWithTieBreak" configurationId="JUnit" />
+    <history-entry file="GameServiceTest - 2020.01.30 at 21h 36m 28s.xml">
+      <configuration name="GameServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104768000" />
+    <option name="totallyTimeSpent" value="138940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.24413647" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.25479743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -418,8 +502,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.26066098" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,7 +513,8 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.33694476" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32910052" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32827735" />
+      <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -466,58 +551,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/SetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/AbstractFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/ScoreFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/SetService.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/PlayerServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -528,47 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/Score.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/SetScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/GameScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="91" selection-start-line="11" selection-start-column="91" selection-end-line="11" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-976">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="163">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -577,28 +574,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Match.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Set.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/exception/GameOverException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-end-line="11" />
+        <state relative-caret-position="180">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -607,57 +601,166 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/IPlayerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="80">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Set.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        <state relative-caret-position="320">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/scoreFactory/TiebreakScore.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/AbstractFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-890">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/SetService.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/stream/ReferencePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="6680">
+          <caret line="406" column="18" selection-start-line="406" selection-start-column="18" selection-end-line="406" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deprecated-list.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/TiebreakScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/SetServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="142" column="43" lean-forward="true" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+        <state relative-caret-position="3140">
+          <caret line="222" column="30" selection-start-line="222" selection-start-column="30" selection-end-line="222" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/GameScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/SetScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/exception/NoTieBreakException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/factory/ScoreFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tennis/service/GameServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/SetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/IGameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tennis/service/ISetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

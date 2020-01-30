@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest
 {
     /**
      * Rigorous Test :-)
@@ -25,21 +25,24 @@ public class AppTest
         assertThat( true ).isTrue();
     }
 
+    /**
+     * The Game.
+     */
     Game game;
 
+    /**
+     * The Game service.
+     */
     GameService gameService;
 
+    /**
+     * Set up.
+     */
     @BeforeEach
     public void setUp(){
         game=Game.builder().build();
 
 
     }
-
-    @Test
-    public void shouldGameStartsWithScrore0(){
-       // assertThat(game.getScorePlayer1()).isEqualTo(0);
-    }
-
 
 }
