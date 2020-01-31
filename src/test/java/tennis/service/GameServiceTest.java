@@ -1,8 +1,10 @@
 package tennis.service;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tennis.exception.GameOverException;
+import tennis.exception.NotAllowedException;
 import tennis.model.Game;
 
 import java.util.stream.IntStream;
@@ -18,18 +20,22 @@ public class GameServiceTest {
     /**
      * The constant gameService.
      */
-    public static GameService gameService=new GameService();
-
+    static GameService gameService;
     /**
      * The Game.
      */
     Game game;
 
+    @BeforeAll
+    public static void setUp(){
+        gameService=new GameService();
+    }
+
     /**
-     * Set up.
+     * Init method.
      */
     @BeforeEach
-    public void setUp(){
+    public void init() throws NotAllowedException {
         game=gameService.createGame();
 
     }
@@ -38,7 +44,7 @@ public class GameServiceTest {
      * Should create game.
      */
     @Test
-    public void shouldCreateGame(){
+    public void shouldCreateGame() throws NotAllowedException {
         Game game=gameService.createGame();
         assertThat(game).isNotNull();
     }
@@ -47,7 +53,7 @@ public class GameServiceTest {
      * Should init score by 0.
      */
     @Test
-    public void shouldInitScoreBy0(){
+    public void shouldInitScoreBy0() throws NotAllowedException {
         Game game=gameService.createGame();
         assertThat(gameService.getGameScore(game).getScorePlayer1()).isEqualTo("0");
     }
@@ -62,6 +68,8 @@ public class GameServiceTest {
                 gameService.play(game,2);
             } catch (GameOverException e) {
                 e.printStackTrace();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
             }
         });
         assertThatThrownBy(() ->gameService.play(game,2))
@@ -75,7 +83,7 @@ public class GameServiceTest {
      * @throws GameOverException the game over exception
      */
     @Test
-    public void shouldAddPointToPlayer1() throws GameOverException {
+    public void shouldAddPointToPlayer1() throws GameOverException, NotAllowedException {
         gameService.play(game,1);
         assertThat(gameService.getGameScore(game).getScorePlayer1()).isEqualTo("15");
     }
@@ -89,6 +97,8 @@ public class GameServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -107,6 +117,8 @@ public class GameServiceTest {
                 gameService.play(game,2);
             } catch (GameOverException e) {
                 e.printStackTrace();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
             }
         });
 
@@ -120,7 +132,7 @@ public class GameServiceTest {
      * @throws GameOverException the game over exception
      */
     @Test
-    public void shouldResetPlayersScoreAfterAWin() throws GameOverException {
+    public void shouldResetPlayersScoreAfterAWin() throws GameOverException, NotAllowedException {
         gameService.play(game,1);
         gameService.play(game,1);
         gameService.resetPlayersScore(game);
@@ -137,11 +149,13 @@ public class GameServiceTest {
      * @throws GameOverException the game over exception
      */
     @Test
-    public void shouldGetAdvantageInScore() throws GameOverException {
+    public void shouldGetAdvantageInScore() throws GameOverException, NotAllowedException {
         IntStream.range(0,3).forEach(i -> {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -149,6 +163,8 @@ public class GameServiceTest {
             try {
                 gameService.play(game,2);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -162,11 +178,13 @@ public class GameServiceTest {
      * @throws GameOverException the game over exception
      */
     @Test
-    public void shouldGetDeuceInScore() throws GameOverException {
+    public void shouldGetDeuceInScore() throws GameOverException, NotAllowedException {
         IntStream.range(0,3).forEach(i -> {
             try {
                 gameService.play(game,2);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -174,6 +192,8 @@ public class GameServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -187,11 +207,13 @@ public class GameServiceTest {
      * @throws GameOverException the game over exception
      */
     @Test
-    public void shouldGetAdvantageAfterADeuce() throws GameOverException {
+    public void shouldGetAdvantageAfterADeuce() throws GameOverException, NotAllowedException {
         IntStream.range(0,3).forEach(i -> {
             try {
                 gameService.play(game,2);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -199,6 +221,8 @@ public class GameServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });

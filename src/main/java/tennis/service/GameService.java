@@ -2,6 +2,7 @@ package tennis.service;
 
 import lombok.extern.java.Log;
 import tennis.exception.GameOverException;
+import tennis.exception.NotAllowedException;
 import tennis.model.Game;
 import tennis.model.factory.GameScore;
 import tennis.model.factory.ScoreFactory;
@@ -12,7 +13,7 @@ import java.util.Optional;
 import static tennis.model.factory.GameScore.scores;
 
 /**
- * The Game service.
+ * The type Game service.
  */
 @Log
 public class GameService implements IGameService {
@@ -21,7 +22,7 @@ public class GameService implements IGameService {
 
 
     @Override
-    public Game createGame() {
+    public Game createGame() throws NotAllowedException {
         GameScore gameScore = (GameScore) scoreFactory.create("GameScore", "0", "0");
         Game game = Game.builder()
                 .gameScore(new ArrayList<GameScore>())
@@ -32,7 +33,7 @@ public class GameService implements IGameService {
     }
 
     @Override
-    public void play(Game game, int serviceWinner) throws GameOverException {
+    public void play(Game game, int serviceWinner) throws GameOverException, NotAllowedException {
         GameScore gameScore = this.getGameScore(game);
         if (game.getGameWinner() != null)
             throw new GameOverException("The game is over");
@@ -68,7 +69,7 @@ public class GameService implements IGameService {
     }
 
     @Override
-    public void resetPlayersScore(Game game) {
+    public void resetPlayersScore(Game game) throws NotAllowedException {
         addScoreToGame(game, "0", "0");
     }
 
@@ -85,7 +86,7 @@ public class GameService implements IGameService {
     }
 
     @Override
-    public void addScoreToGame(Game game, String scorePlayer1, String scorePlayer2) {
+    public void addScoreToGame(Game game, String scorePlayer1, String scorePlayer2) throws NotAllowedException {
         GameScore gameScore = (GameScore) scoreFactory.create("GameScore", scorePlayer1, scorePlayer2);
         game.getGameScore().add(gameScore);
     }

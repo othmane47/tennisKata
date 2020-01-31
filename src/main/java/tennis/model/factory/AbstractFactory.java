@@ -1,5 +1,7 @@
 package tennis.model.factory;
 
+import tennis.exception.NotAllowedException;
+
 /**
  * The interface Abstract factory.
  *
@@ -14,7 +16,7 @@ public interface AbstractFactory<T> {
      * @param scorePlayer2 the score player 2
      * @return the t
      */
-    T create (String scoreType,int scorePlayer1,int scorePlayer2);
+    T create (String scoreType,int scorePlayer1,int scorePlayer2) throws NotAllowedException;
 
     /**
      * Create t.
@@ -24,5 +26,5 @@ public interface AbstractFactory<T> {
      * @param scorePlayer2 the score player 2
      * @return the t
      */
-    T create (String scoreType,String scorePlayer1,String scorePlayer2);
+    T create (String scoreType,String scorePlayer1,String scorePlayer2) throws NotAllowedException;
 }

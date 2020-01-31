@@ -1,11 +1,13 @@
 package tennis.model.factory;
 
+import tennis.exception.NotAllowedException;
+
 /**
  * The type Score factory.
  */
 public class ScoreFactory implements AbstractFactory<Score> {
     @Override
-    public Score create(String scoreType, int scorePlayer1, int scorePlayer2) {
+    public Score create(String scoreType, int scorePlayer1, int scorePlayer2) throws NotAllowedException {
         switch (scoreType) {
             case "SetScore": {
                 return SetScore.builder()
@@ -17,21 +19,20 @@ public class ScoreFactory implements AbstractFactory<Score> {
                         .scorePlayer1(scorePlayer1)
                         .scorePlayer2(scorePlayer2).build();
             }
+            default: throw new NotAllowedException("Score type not allowed");
         }
-
-        return null;
     }
 
     @Override
-    public Score create(String scoreType, String scorePlayer1, String scorePlayer2) {
+    public Score create(String scoreType, String scorePlayer1, String scorePlayer2) throws NotAllowedException {
         switch (scoreType) {
             case "GameScore": {
                 return GameScore.builder()
                         .scorePlayer1(scorePlayer1)
                         .scorePlayer2(scorePlayer2).build();
             }
-        }
+            default: throw new NotAllowedException("Score type not allowed");
 
-        return null;
+        }
     }
 }

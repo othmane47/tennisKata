@@ -1,10 +1,13 @@
 package tennis.service;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tennis.exception.GameOverException;
+import tennis.exception.NotAllowedException;
 import tennis.model.Game;
 import tennis.model.Set;
+import tennis.model.factory.ScoreFactory;
 import tennis.model.factory.SetScore;
 
 import java.util.stream.IntStream;
@@ -19,11 +22,13 @@ class SetServiceTest {
     /**
      * The Set service.
      */
-    SetService setService=new SetService();
+    static SetService setService;
     /**
      * The Game service.
      */
-    GameService gameService=new GameService();
+    static GameService gameService;
+
+    static ScoreFactory scoreFactory;
     /**
      * The Set.
      */
@@ -33,12 +38,19 @@ class SetServiceTest {
      */
     Game game;
 
+    @BeforeAll
+    public static void setUp(){
+        setService=new SetService();
+        gameService=new GameService();
+        scoreFactory=new ScoreFactory();
+    }
 
     /**
-     * Set up.
+     * Init method.
      */
     @BeforeEach
-    public void setUp(){
+    public void init() throws NotAllowedException {
+
         set=setService.createSet();
     }
 
@@ -46,7 +58,7 @@ class SetServiceTest {
      * Should create set.
      */
     @Test
-    public void shouldCreateSet(){
+    public void shouldCreateSet() throws NotAllowedException {
 
         Set set=setService.createSet();
 
@@ -59,7 +71,7 @@ class SetServiceTest {
      * @throws Exception the exception
      */
     @Test
-    public void shouldAddGamesToSet() throws Exception {
+    public void shouldAddGamesToSet() throws NotAllowedException, GameOverException {
         Game game= gameService.createGame();
 
         gameService.play(game,1);
@@ -68,6 +80,8 @@ class SetServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -80,7 +94,7 @@ class SetServiceTest {
      * Should throw exception if game is unfinished.
      */
     @Test
-    public void shouldThrowExceptionIfGameIsUnfinished(){
+    public void shouldThrowExceptionIfGameIsUnfinished() throws NotAllowedException {
         Game game= gameService.createGame();
 
         assertThatThrownBy(() ->setService.playGame(set, game))
@@ -101,6 +115,8 @@ class SetServiceTest {
                 gameService.play(game,1);
             } catch (GameOverException e) {
                 e.printStackTrace();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
             }
         });
         setService.playGame(set, game);
@@ -110,6 +126,8 @@ class SetServiceTest {
             try {
                 gameService.play(game2,2);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -126,10 +144,7 @@ class SetServiceTest {
      */
     @Test
     public void shouldPlayerOneWinsTheSetWithScore6() throws Exception {
-        SetScore newScore = SetScore.builder()
-                .scorePlayer1(5)
-                .scorePlayer2(4)
-                .build();
+        SetScore newScore = (SetScore) scoreFactory.create("SetScore",5,4);
         set.getSetScore().add(newScore);
 
 
@@ -138,6 +153,8 @@ class SetServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -153,10 +170,7 @@ class SetServiceTest {
      */
     @Test
     public void shouldPlayerOneWinsTheSetWithScore7() throws Exception {
-        SetScore newScore = SetScore.builder()
-                .scorePlayer1(6)
-                .scorePlayer2(5)
-                .build();
+        SetScore newScore = (SetScore) scoreFactory.create("SetScore",6,5);
         set.getSetScore().add(newScore);
 
         Game game= gameService.createGame();
@@ -164,6 +178,8 @@ class SetServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -178,11 +194,8 @@ class SetServiceTest {
      * @throws Exception the exception
      */
     @Test
-    public void shouldActiveTieBreakRules() throws Exception {
-        SetScore newScore = SetScore.builder()
-                .scorePlayer1(6)
-                .scorePlayer2(5)
-                .build();
+    public void shouldActiveTieBreakRules() throws NotAllowedException, GameOverException {
+        SetScore newScore = (SetScore) scoreFactory.create("SetScore",6,5);
         set.getSetScore().add(newScore);
 
         game= gameService.createGame();
@@ -190,6 +203,8 @@ class SetServiceTest {
             try {
                 gameService.play(game,2);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -200,6 +215,8 @@ class SetServiceTest {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
+                e.printStackTrace();
+            } catch (NotAllowedException e) {
                 e.printStackTrace();
             }
         });
@@ -208,41 +225,50 @@ class SetServiceTest {
     }
 
     /**
-     * Should player two win with tie break.
+     * Should player two wins with tie break.
      *
      * @throws Exception the exception
      */
     @Test
-    public void shouldPlayerTwoWinWithTieBreak() throws Exception {
-        SetScore newScore = SetScore.builder()
-                .scorePlayer1(6)
-                .scorePlayer2(5)
-                .build();
+    public void shouldPlayerTwoWinWithTieBreak() throws NotAllowedException {
+        SetScore newScore = (SetScore) scoreFactory.create("SetScore",6,5);
         set.getSetScore().add(newScore);
 
         IntStream.range(0,10).forEach(i ->{
-        game= gameService.createGame();
-        IntStream.range(0,4).forEach(j -> {
+            try {
+                game= gameService.createGame();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
+            }
+            IntStream.range(0,4).forEach(j -> {
             try {
                 gameService.play(game,2);
             } catch (GameOverException e) {
                 e.printStackTrace();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
             }
-        });
+            });
             try {
                 setService.playGame(set, game);
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            game= gameService.createGame();
-        IntStream.range(0,4).forEach(j -> {
+            try {
+                game= gameService.createGame();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
+            }
+            IntStream.range(0,4).forEach(j -> {
             try {
                 gameService.play(game,1);
             } catch (GameOverException e) {
                 e.printStackTrace();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
             }
-        });
+            });
             try {
                 setService.playGame(set, game);
             } catch (Exception e) {
@@ -250,11 +276,17 @@ class SetServiceTest {
             }
         });
         IntStream.range(0,3).forEach(i -> {
-            game= gameService.createGame();
+            try {
+                game= gameService.createGame();
+            } catch (NotAllowedException e) {
+                e.printStackTrace();
+            }
             IntStream.range(0,4).forEach(j -> {
                 try {
                     gameService.play(game,2);
                 } catch (GameOverException e) {
+                    e.printStackTrace();
+                } catch (NotAllowedException e) {
                     e.printStackTrace();
                 }
             });

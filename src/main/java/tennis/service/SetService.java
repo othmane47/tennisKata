@@ -2,7 +2,7 @@ package tennis.service;
 
 import lombok.extern.java.Log;
 import tennis.exception.GameOverException;
-import tennis.exception.NoTieBreakException;
+import tennis.exception.NotAllowedException;
 import tennis.model.Game;
 import tennis.model.Set;
 import tennis.model.factory.ScoreFactory;
@@ -23,7 +23,7 @@ public class SetService implements ISetService {
 
 
     @Override
-    public Set createSet() {
+    public Set createSet() throws NotAllowedException {
         Set set = Set.builder()
                 .setScore(new ArrayList<SetScore>())
                 .games(new ArrayList<>())
@@ -33,7 +33,7 @@ public class SetService implements ISetService {
     }
 
     @Override
-    public void playGame(Set set, Game game) throws GameOverException, NoTieBreakException {
+    public void playGame(Set set, Game game) throws GameOverException, NotAllowedException {
         SetScore setScore;
 
         if (game.getGameWinner() == null)
@@ -89,9 +89,9 @@ public class SetService implements ISetService {
     }
 
     @Override
-    public TiebreakScore getTieScore(Set set) throws NoTieBreakException {
+    public TiebreakScore getTieScore(Set set) throws NotAllowedException {
         if (set.getTieScore() == null)
-            throw new NoTieBreakException("No tiebreak in this set");
+            throw new NotAllowedException("No tiebreak in this set");
         long count = set.getTieScore().stream().count();
         Optional<TiebreakScore> tiebreakScore = set.getTieScore().stream().skip(count - 1).findFirst();
         if (tiebreakScore.isPresent())
@@ -100,20 +100,20 @@ public class SetService implements ISetService {
     }
 
     @Override
-    public void addScoreToSet(Set set, int scorePlayer1, int scorePlayer2) {
+    public void addScoreToSet(Set set, int scorePlayer1, int scorePlayer2) throws NotAllowedException {
         SetScore newScore = (SetScore) scoreFactory.create("SetScore", scorePlayer1, scorePlayer2);
         set.getSetScore().add(newScore);
     }
 
     @Override
-    public void addScoreToTiebreak(Set set, int scorePlayer1, int scorePlayer2) {
+    public void addScoreToTiebreak(Set set, int scorePlayer1, int scorePlayer2) throws NotAllowedException {
         tieScore = (TiebreakScore) scoreFactory.create("TiebreakScore", scorePlayer1, scorePlayer2);
         set.getTieScore().add(tieScore);
 
     }
 
     @Override
-    public void printScore(Set set) throws NoTieBreakException {
+    public void printScore(Set set) throws NotAllowedException {
         StringBuilder trace = getSetScore(set).trace();
 
         if(set.getTieScore()!=null && !set.getTieScore().isEmpty())

@@ -3,12 +3,12 @@ package tennis.exception;
 /**
  * The type No tie break exception.
  */
-public class NoTieBreakException extends Exception{
+public class NotAllowedException extends Exception{
     /**
      * Instantiates a new No tie break exception.
      *
      * @param errorMessage the error message
      */
-    public NoTieBreakException(String errorMessage){super(errorMessage);}
+    public NotAllowedException(String errorMessage){super(errorMessage);}
 
 }

@@ -1,8 +1,12 @@
 package tennis;
 
+import lombok.extern.java.Log;
+
 /**
  * Hello world!
  */
+@Log
+
 public class App
 {
     /**
@@ -12,5 +16,6 @@ public class App
      */
     public static void main( String[] args )
     {
+        log.info("Tennis Score Kata");
     }
 }

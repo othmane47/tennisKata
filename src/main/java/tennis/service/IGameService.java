@@ -1,6 +1,7 @@
 package tennis.service;
 
 import tennis.exception.GameOverException;
+import tennis.exception.NotAllowedException;
 import tennis.model.Game;
 import tennis.model.factory.Score;
 
@@ -14,7 +15,7 @@ public interface IGameService {
      *
      * @return the game
      */
-    Game createGame();
+    Game createGame() throws NotAllowedException;
 
     /**
      * Play.
@@ -23,14 +24,14 @@ public interface IGameService {
      * @param serviceWinner the service winner
      * @throws GameOverException the game over exception
      */
-    void play(Game game,int serviceWinner) throws GameOverException;
+    void play(Game game,int serviceWinner) throws GameOverException, NotAllowedException;
 
     /**
      * Reset players score.
      *
      * @param game the game
      */
-    void resetPlayersScore(Game game);
+    void resetPlayersScore(Game game) throws NotAllowedException;
 
     /**
      * Gets game score.
@@ -47,7 +48,7 @@ public interface IGameService {
      * @param scorePlayer1 the score player 1
      * @param scorePlayer2 the score player 2
      */
-    void addScoreToGame(Game game,String scorePlayer1,String scorePlayer2);
+    void addScoreToGame(Game game,String scorePlayer1,String scorePlayer2) throws NotAllowedException;
 
     /**
      * Print score.
